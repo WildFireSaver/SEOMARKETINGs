@@ -6,7 +6,6 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ErrorBoundary } from "@/components/error-boundary"
 import { ThemeProvider } from "@/components/theme-provider"
-import { SpeedInsightsClient } from "@/components/speed-insights-client"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -31,9 +30,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Footer />
             </div>
           </ErrorBoundary>
-
-          {/* 👉 now loads only in the browser */}
-          <SpeedInsightsClient />
         </ThemeProvider>
       </body>
     </html>
