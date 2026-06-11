@@ -3,8 +3,9 @@
 import { useState, useEffect, useCallback } from "react"
 import { Hero } from "./hero"
 import { ProjectGallery } from "./project-gallery"
-import { SurveyPreview } from "./survey-preview"
+import { Survey } from "./survey"
 import { ZipCodeChecker } from "./zip-code-checker"
+import { Clock, Shield, CheckSquare } from "lucide-react"
 import { getSessionData, saveSessionData } from "@/lib/offline-storage"
 import { useRouter } from "next/navigation"
 import { SectionErrorBoundary } from "./error-boundary"
@@ -161,8 +162,50 @@ export function LandingPage() {
         <ProjectGallery />
       </SectionErrorBoundary>
 
-      <SectionErrorBoundary name="SurveyPreview">
-        <SurveyPreview />
+      <SectionErrorBoundary name="Survey">
+        <section id="assessment" className="bg-slate-50 py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto text-center mb-10">
+              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4 text-balance">
+                Start your free assessment
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed text-pretty mb-6">
+                Answer a few quick questions about your property and the work you have in mind. It takes about two
+                minutes, with no cost or obligation to get matched with a licensed specialist.
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-slate-600">
+                <span className="flex items-center gap-2">
+                  <Clock className="h-4 w-4 text-primary" />
+                  About 2 minutes
+                </span>
+                <span className="flex items-center gap-2">
+                  <Shield className="h-4 w-4 text-primary" />
+                  Your information stays private
+                </span>
+                <span className="flex items-center gap-2">
+                  <CheckSquare className="h-4 w-4 text-primary" />
+                  Matched with a local specialist
+                </span>
+              </div>
+            </div>
+            <Survey
+              formData={formData}
+              onFormChange={handleFormChange}
+              onNextStep={() => {
+                try {
+                  router.push("/project-questions")
+                } catch (err) {
+                  handleError(new Error("Navigation to project questions failed"))
+                }
+              }}
+              onPrevStep={() => {
+                if (typeof window !== "undefined") {
+                  window.scrollTo({ top: 0, behavior: "smooth" })
+                }
+              }}
+            />
+          </div>
+        </section>
       </SectionErrorBoundary>
 
       {/* Personal Video Popup */}
