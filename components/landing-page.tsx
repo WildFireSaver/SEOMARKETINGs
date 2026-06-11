@@ -146,7 +146,7 @@ export function LandingPage() {
   }
 
   return (
-    <div className="min-h-screen border font-normal bg-transparent">
+    <div className="min-h-screen font-normal bg-transparent">
       <SectionErrorBoundary name="Hero">
         <Hero
           onGetStarted={handleGetStarted}

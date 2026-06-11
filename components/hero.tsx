@@ -3,7 +3,7 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, Shield, ArrowRight, MapPin, Lock, Star, Hammer } from "lucide-react"
+import { CheckCircle, Shield, ArrowRight, MapPin, Lock } from "lucide-react"
 import { useRouter } from "next/navigation"
 
 interface HeroProps {
@@ -30,7 +30,7 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
 
   if (!mounted) {
     return (
-      <div className="flex items-center justify-center min-h-[calc(100vh-80px)] bg-orange-50">
+      <div className="flex items-center justify-center min-h-[calc(100vh-80px)] bg-white">
         <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary"></div>
       </div>
     )
@@ -39,191 +39,125 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
   return (
     <section
       id="check-eligibility"
-      className="relative bg-orange-50 overflow-hidden flex flex-col justify-center min-h-[calc(100vh-80px)] pt-3 pb-3 lg:pt-4 lg:pb-4"
+      className="relative bg-white overflow-hidden flex flex-col justify-center min-h-[calc(100vh-80px)] py-12 lg:py-16"
     >
-      <div className="absolute inset-0 z-0 opacity-25 mix-blend-multiply">
-        {/* Base Layer - Full Coverage */}
-        <img
-          src="/modern-home-renovation.png"
-          alt="Background texture of a modern home renovation"
-          className="absolute inset-0 w-full h-full object-cover opacity-40" // Covers everything, lower opacity
-        />
-        <img
-          src="/kitchen-remodeling-tools-blueprints.png"
-          alt="Background texture of kitchen blueprints"
-          className="absolute inset-0 w-full h-full object-cover opacity-30 transform scale-110" // Slightly scaled to ensure edge coverage, lower opacity
-        />
-
-        {/* Mid-ground, larger elements for texture */}
-        <img
-          src="/backyard-adu-construction.png"
-          alt="Detail of ADU construction"
-          className="absolute top-0 left-0 w-3/4 h-3/4 object-cover opacity-60"
-        />
-        <img
-          src="/projects/roof-replacement-hero.png"
-          alt="Detail of roof replacement"
-          className="absolute bottom-0 right-0 w-3/4 h-3/4 object-cover opacity-60"
-        />
-
-        {/* Smaller, more focused elements for visual interest, carefully placed */}
-        <img
-          src="/placeholder-n9k9i.png" // Modern roof detail
-          alt="Detail of a modern roof"
-          className="absolute top-1/4 right-1/4 w-1/2 h-1/2 object-contain opacity-50" // Using object-contain to see more
-        />
-        <img
-          src="/bathroom-renovation.png"
-          alt="Detail of bathroom renovation"
-          className="absolute bottom-1/4 left-1/4 w-1/2 h-1/2 object-contain opacity-50" // Using object-contain
-        />
-
-        {/* Subtle corner/edge accents if needed, ensuring they blend */}
-        <img
-          src="/projects/modern-kitchen-hero.png"
-          alt="Accent image of a modern kitchen"
-          className="absolute bottom-5 left-5 w-1/3 h-1/3 object-cover opacity-40"
-        />
-        <img
-          src="/projects/luxury-bathroom-hero.png"
-          alt="Accent image of a luxury bathroom"
-          className="absolute top-5 right-5 w-1/3 h-1/3 object-cover opacity-40"
-        />
-      </div>
       <div className="relative z-10 container mx-auto px-4">
-        {/* ... rest of the hero content remains the same ... */}
-        <div className="max-w-4xl mx-auto text-center mb-4 lg:mb-6">
-          <div className="inline-flex items-center gap-2 mb-2">
-            <Hammer className="h-6 w-6 text-primary" />
-            <span className="text-lg font-semibold text-slate-900">Consult & Build CA</span>
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
+          {/* Left: Copy + CTA */}
+          <div className="max-w-xl">
+            <div className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3 py-1 mb-5">
+              <MapPin className="h-3.5 w-3.5 text-primary" />
+              <span className="text-xs font-medium text-slate-700">Serving Sacramento &amp; the Central Valley</span>
+            </div>
+
+            <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight text-balance mb-5">
+              Transform your backyard or roof &mdash; without paying upfront
+            </h1>
+
+            <p className="text-lg text-slate-600 leading-relaxed text-pretty mb-8">
+              Complete outdoor remodels for California homeowners &mdash; pools, landscaping, roofing, and patios.
+              Get matched with licensed local crews and start with no money down.
+            </p>
+
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                <span className="text-slate-700">Flexible in-house options tailored to your budget</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                <span className="text-slate-700">Energy-efficient upgrades that may qualify for rebates</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                <span className="text-slate-700">Licensed, insured local crews &mdash; done right the first time</span>
+              </li>
+            </ul>
+
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+              <Button
+                onClick={handleGetStartedClick}
+                size="lg"
+                className="bg-primary hover:bg-orange-600 text-primary-foreground px-7 font-semibold"
+              >
+                Get Free Estimate
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <div className="flex items-center gap-2 text-sm text-slate-500">
+                <Shield className="h-4 w-4 text-green-600" />
+                <span>No obligation. Limited spots each week.</span>
+              </div>
+            </div>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-2 leading-tight">
-            🏠 Transform Your Backyard or Roof — Without Paying Upfront!
-          </h1>
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-orange-600 mb-3">
-            Sacramento & Valley homeowners: we specialize in complete outdoor remodels — pools, landscaping, roofing,
-            patios, and more — with no upfront cost to get started.
+
+          {/* Right: ZIP checker card over hero image */}
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-2xl shadow-xl">
+              <img
+                src="/backyard-adu-construction.png"
+                alt="Completed backyard remodel by a Consult &amp; Build CA crew"
+                className="w-full h-72 lg:h-[420px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
+            </div>
+
+            <div className="relative -mt-20 mx-4 lg:mx-6 bg-white rounded-xl shadow-lg border border-slate-200 p-6">
+              {!zipVerified ? (
+                <div className="space-y-4">
+                  <div>
+                    <h2 className="text-lg font-bold text-slate-900">Check your area</h2>
+                    <p className="text-sm text-slate-600 mt-1">
+                      Enter your ZIP code to see the services available near you.
+                    </p>
+                  </div>
+                  {zipCodeCheckerSlot}
+                  <div className="flex items-center gap-2 text-xs text-slate-500">
+                    <Lock className="h-3.5 w-3.5 text-green-600" />
+                    <span>We never share or sell your information.</span>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-3 text-center">
+                  <div className="flex items-center justify-center gap-2">
+                    <CheckCircle className="h-6 w-6 text-green-600" />
+                    <h2 className="text-lg font-bold text-green-700">We serve your area</h2>
+                  </div>
+                  <p className="text-slate-600 text-sm">
+                    We have crews in your neighborhood. Let&apos;s discuss your project.
+                  </p>
+                  <Button
+                    onClick={handleGetStartedClick}
+                    className="w-full bg-primary hover:bg-orange-600 text-primary-foreground font-semibold"
+                  >
+                    Get Free Estimate
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* How it works */}
+        <div className="max-w-5xl mx-auto mt-16 lg:mt-20">
+          <h2 className="text-center text-sm font-semibold uppercase tracking-wide text-slate-500 mb-8">
+            How it works
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto">
-            💰 In-house options tailored to your needs
-            <br />🌿 Energy-efficient upgrades may qualify for rebates
-            <br />
-            ⏱️ Fast project turnaround — limited spots weekly
-            <br />📍 Local crews, local service — done right the first time
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-3 gap-4 lg:gap-6 mb-4 lg:mb-6 items-start max-w-6xl mx-auto">
-          <div className="bg-yellow-50/95 backdrop-blur-sm rounded-xl border border-yellow-200 p-4 h-full">
-            <h3 className="text-lg font-bold text-slate-900 mb-2 text-center flex items-center justify-center gap-2">
-              <Shield className="h-5 w-5 text-green-600" />
-              Why It's Safe
-            </h3>
-            <ul className="space-y-1.5 text-sm text-slate-700">
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                <span>Licensed & insured Sacramento Valley contractors</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                <span>No upfront payments — we work with your budget</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                <span>Local crews who understand California building codes</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="bg-white/95 backdrop-blur-sm shadow-2xl rounded-xl p-4 lg:p-6 border-2 border-primary h-full">
-            {!zipVerified ? (
-              <div className="space-y-3 text-center">
-                <h3 className="text-xl font-bold text-slate-900 flex items-center justify-center gap-2">
-                  🔍 Check Your Area:
-                </h3>
-                <div className="flex items-center gap-2 justify-center text-base">
-                  <MapPin className="h-4 w-4 text-primary" />
-                  <span className="text-slate-700 font-medium">Enter your ZIP code to see available services:</span>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { step: "1", text: "Tell us about your backyard or roof project" },
+              { step: "2", text: "Get matched with local outdoor specialists" },
+              { step: "3", text: "Receive your free, no-obligation estimate" },
+              { step: "4", text: "Start your transformation with no money down" },
+            ].map((item) => (
+              <div key={item.step} className="rounded-xl border border-slate-200 bg-white p-5">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-50 text-primary font-bold mb-3">
+                  {item.step}
                 </div>
-                {zipCodeCheckerSlot}
-                <div className="flex items-center justify-center gap-1 text-sm text-slate-600 pt-1">
-                  <Lock className="h-3.5 w-3.5 text-green-600" />
-                  <span className="font-medium">We never share or sell your info. Period.</span>
-                </div>
+                <p className="text-sm text-slate-700 leading-relaxed">{item.text}</p>
               </div>
-            ) : (
-              <div className="space-y-3 text-center">
-                <div className="flex items-center justify-center gap-2">
-                  <CheckCircle className="h-7 w-7 text-green-600" />
-                  <h3 className="text-xl font-bold text-green-700">✅ We Serve Your Area!</h3>
-                </div>
-                <p className="text-slate-700 text-base">
-                  Perfect! We have crews in your neighborhood. Let's discuss your project.
-                </p>
-                <Button
-                  onClick={handleGetStartedClick}
-                  size="default"
-                  className="w-full bg-primary hover:bg-orange-600 text-primary-foreground px-6 py-2.5 text-base font-semibold shadow-md hover:shadow-lg transition-shadow"
-                >
-                  Get Free Estimate
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-            )}
+            ))}
           </div>
-
-          <div className="bg-white/95 backdrop-blur-sm rounded-xl border border-slate-200 p-4 h-full">
-            <h3 className="text-lg font-bold text-slate-900 mb-2 text-center flex items-center justify-center gap-2">
-              🎯 Here’s How It Works
-            </h3>
-            <ul className="space-y-1.5 text-sm text-slate-700">
-              <li className="flex items-start gap-2">
-                <span className="font-bold text-primary">1.</span>
-                <span>Tell us about your backyard or roof project</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="font-bold text-primary">2.</span>
-                <span>Get matched with local outdoor specialists</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="font-bold text-primary">3.</span>
-                <span>Receive your free, no-obligation estimate</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="font-bold text-green-600">4.</span>
-                <span>Start your transformation — no money down</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="max-w-3xl mx-auto bg-gradient-to-r from-orange-500 to-yellow-400 rounded-xl text-slate-900 p-4 text-center shadow-lg">
-          <h3 className="text-xl font-bold mb-1 text-white">🌟 Ready to Transform Your Outdoor Space?</h3>
-          <p className="text-base mb-2 text-white/90">
-            Get your free estimate and start planning your dream backyard or roof upgrade.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm text-white/90">
-            <span className="flex items-center gap-1">
-              <Star className="h-3.5 w-3.5 text-yellow-300" />
-              Limited spots weekly
-            </span>
-            <span className="flex items-center gap-1">
-              <Shield className="h-3.5 w-3.5 text-yellow-300" />
-              Zero pressure
-            </span>
-            <span className="flex items-center gap-1">
-              <CheckCircle className="h-3.5 w-3.5 text-yellow-300" />
-              Real guidance
-            </span>
-          </div>
-          <Button
-            onClick={handleGetStartedClick}
-            size="default"
-            className="w-full bg-primary hover:bg-orange-600 text-primary-foreground px-6 py-2.5 text-base font-semibold shadow-md hover:shadow-lg transition-shadow"
-          >
-            👉 Get Free Estimate — Risk-Free
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
         </div>
       </div>
     </section>
