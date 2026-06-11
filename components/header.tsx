@@ -10,12 +10,12 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-400 flex items-center justify-center shadow-md">
-              <Hammer className="h-5 w-5 text-white" />
+            <div className="h-10 w-10 rounded-md bg-slate-900 flex items-center justify-center">
+              <Hammer className="h-5 w-5 text-primary" />
             </div>
             <div>
-              <div className="text-lg sm:text-xl font-bold text-slate-900">Consult & Build CA</div>
-              <div className="text-xs text-slate-600 hidden sm:block">Professional Contractor Network</div>
+              <div className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">Consult &amp; Build CA</div>
+              <div className="text-xs text-slate-500 hidden sm:block">Licensed California Contractor Network</div>
             </div>
           </Link>
 

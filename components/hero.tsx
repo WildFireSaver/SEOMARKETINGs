@@ -39,13 +39,13 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
   return (
     <section
       id="check-eligibility"
-      className="relative bg-white overflow-hidden flex flex-col justify-center min-h-[calc(100vh-80px)] py-12 lg:py-16"
+      className="relative bg-slate-50 overflow-hidden flex flex-col justify-center min-h-[calc(100vh-80px)] py-12 lg:py-16"
     >
       <div className="relative z-10 container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Left: Copy + CTA */}
           <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 mb-6">
               <MapPin className="h-3.5 w-3.5 text-primary" />
               <span className="text-xs font-medium text-slate-700">Licensed &amp; insured. Serving all of California.</span>
             </div>
@@ -54,20 +54,21 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
               Upgrade your backyard or roof with $0 down
             </h1>
 
-            <p className="text-lg text-slate-600 leading-relaxed text-pretty mb-8">
+            <p className="text-lg text-slate-600 leading-relaxed text-pretty mb-6">
               From the coast to the valley, we design and build outdoor spaces California homeowners love: pools,
               landscaping, patios, and Title&nbsp;24 compliant, fire-rated roofing. Tell us what you have in mind and
               we&apos;ll match you with vetted local crews, with no upfront cost to get started.
             </p>
 
+            <div className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-4 mb-8">
+              <Zap className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+              <p className="text-sm text-slate-700">
+                <span className="font-semibold text-slate-900">You may qualify for state rebates.</span> Energy-efficient
+                Title&nbsp;24 upgrades can reduce your project cost. We&apos;ll confirm your eligibility for free.
+              </p>
+            </div>
+
             <ul className="space-y-4 mb-8">
-              <li className="flex items-start gap-3">
-                <Zap className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold text-slate-900">Title 24 energy efficiency</p>
-                  <p className="text-sm text-slate-600">High-performance builds that may qualify for state rebates.</p>
-                </div>
-              </li>
               <li className="flex items-start gap-3">
                 <Flame className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                 <div>
@@ -108,7 +109,7 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
                 alt="Completed backyard remodel by a Consult and Build CA crew"
                 className="w-full h-72 lg:h-[420px] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent" />
             </div>
 
             <div className="relative -mt-20 mx-4 lg:mx-6 bg-white rounded-xl shadow-lg border border-slate-200 p-6">
@@ -162,7 +163,7 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
               { step: "4", text: "When you're ready, we begin with no money down." },
             ].map((item) => (
               <div key={item.step} className="rounded-xl border border-slate-200 bg-white p-6">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-50 text-primary font-bold mb-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-primary font-bold mb-4">
                   {item.step}
                 </div>
                 <p className="text-sm text-slate-600 leading-relaxed">{item.text}</p>

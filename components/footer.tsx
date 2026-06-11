@@ -5,17 +5,17 @@ import { Hammer, Facebook, Instagram } from "lucide-react" // Removed Twitter
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 py-8 font-normal text-base text-black bg-transparent">
+    <footer className="border-t border-slate-800 py-12 font-normal text-base text-slate-300 bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div className="text-center md:text-left">
             <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
-              <div className="h-10 w-10 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-400 flex items-center justify-center shadow-md">
-                <Hammer className="h-5 w-5 text-white" />
+              <div className="h-10 w-10 rounded-md bg-white/10 flex items-center justify-center">
+                <Hammer className="h-5 w-5 text-primary" />
               </div>
-              <span className="text-xl font-bold text-black">Consult & Build CA</span>
+              <span className="text-xl font-bold text-white tracking-tight">Consult &amp; Build CA</span>
             </div>
-            <p className="text-sm mb-4">
+            <p className="text-sm mb-4 text-slate-400">
               Connecting California homeowners with licensed, pre-screened contractors for quality home improvement
               projects.
             </p>
@@ -25,7 +25,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="hover:text-orange-400 transition-colors"
+                className="text-slate-400 hover:text-primary transition-colors"
               >
                 <Facebook size={20} />
               </Link>
@@ -34,7 +34,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="hover:text-orange-400 transition-colors"
+                className="text-slate-400 hover:text-primary transition-colors"
               >
                 <Instagram size={20} />
               </Link>
@@ -42,21 +42,21 @@ export function Footer() {
           </div>
 
           <div className="text-center md:text-left">
-            <h3 className="text-lg font-semibold mb-4 text-black">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/about" className="hover:text-orange-400 transition-colors">
+                <Link href="/about" className="text-slate-400 hover:text-primary transition-colors">
                   About Us
                 </Link>
               </li>
               {/* "Our Services" link removed */}
               <li>
-                <Link href="/contact" className="hover:text-orange-400 transition-colors">
+                <Link href="/contact" className="text-slate-400 hover:text-primary transition-colors">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-orange-400 transition-colors">
+                <Link href="/faq" className="text-slate-400 hover:text-primary transition-colors">
                   FAQ
                 </Link>
               </li>
@@ -64,20 +64,20 @@ export function Footer() {
           </div>
 
           <div className="text-center md:text-left">
-            <h3 className="text-lg font-semibold mb-4 text-black">Legal</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/privacy-policy" className="hover:text-orange-400 transition-colors">
+                <Link href="/privacy-policy" className="text-slate-400 hover:text-primary transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="hover:text-orange-400 transition-colors">
+                <Link href="/terms" className="text-slate-400 hover:text-primary transition-colors">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="/cookie-policy" className="hover:text-orange-400 transition-colors">
+                <Link href="/cookie-policy" className="text-slate-400 hover:text-primary transition-colors">
                   Cookie Policy
                 </Link>
               </li>
@@ -85,8 +85,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-700 pt-8 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} Consult & Build CA. All rights reserved.</p>
+        <div className="border-t border-slate-800 pt-8 text-center text-sm text-slate-400">
+          <p>&copy; {new Date().getFullYear()} Consult &amp; Build CA. All rights reserved.</p>
           <p className="mt-1">Licensed California Home Improvement Network.</p>
         </div>
       </div>
