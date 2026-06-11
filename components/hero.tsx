@@ -47,22 +47,23 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
           <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3 py-1 mb-5">
               <MapPin className="h-3.5 w-3.5 text-primary" />
-              <span className="text-xs font-medium text-slate-700">Serving Sacramento &amp; the Central Valley</span>
+              <span className="text-xs font-medium text-slate-700">Proudly serving homeowners across California</span>
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight text-balance mb-5">
-              Transform your backyard or roof &mdash; without paying upfront
+              Let&apos;s bring your backyard or roof to life
             </h1>
 
             <p className="text-lg text-slate-600 leading-relaxed text-pretty mb-8">
-              Complete outdoor remodels for California homeowners &mdash; pools, landscaping, roofing, and patios.
-              Get matched with licensed local crews and start with no money down.
+              From the coast to the valley, we help California families create the outdoor spaces they&apos;ve always
+              wanted &mdash; pools, landscaping, roofing, and patios. Tell us what you&apos;re dreaming up, and
+              we&apos;ll match you with trusted local crews. No upfront cost to get started.
             </p>
 
             <ul className="space-y-3 mb-8">
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-700">Flexible in-house options tailored to your budget</span>
+                <span className="text-slate-700">Friendly options built around your budget &mdash; no pressure</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
@@ -70,7 +71,7 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-700">Licensed, insured local crews &mdash; done right the first time</span>
+                <span className="text-slate-700">Licensed, insured local crews who treat your home like their own</span>
               </li>
             </ul>
 
@@ -80,12 +81,12 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
                 size="lg"
                 className="bg-primary hover:bg-orange-600 text-primary-foreground px-7 font-semibold"
               >
-                Get Free Estimate
+                Get My Free Estimate
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <div className="flex items-center gap-2 text-sm text-slate-500">
                 <Shield className="h-4 w-4 text-green-600" />
-                <span>No obligation. Limited spots each week.</span>
+                <span>Free and no obligation &mdash; only a few spots open each week.</span>
               </div>
             </div>
           </div>
@@ -105,31 +106,31 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
               {!zipVerified ? (
                 <div className="space-y-4">
                   <div>
-                    <h2 className="text-lg font-bold text-slate-900">Check your area</h2>
+                    <h2 className="text-lg font-bold text-slate-900">See what&apos;s available near you</h2>
                     <p className="text-sm text-slate-600 mt-1">
-                      Enter your ZIP code to see the services available near you.
+                      Pop in your ZIP code and we&apos;ll show you the services we offer in your neighborhood.
                     </p>
                   </div>
                   {zipCodeCheckerSlot}
                   <div className="flex items-center gap-2 text-xs text-slate-500">
                     <Lock className="h-3.5 w-3.5 text-green-600" />
-                    <span>We never share or sell your information.</span>
+                    <span>Your information stays private &mdash; we never share or sell it.</span>
                   </div>
                 </div>
               ) : (
                 <div className="space-y-3 text-center">
                   <div className="flex items-center justify-center gap-2">
                     <CheckCircle className="h-6 w-6 text-green-600" />
-                    <h2 className="text-lg font-bold text-green-700">We serve your area</h2>
+                    <h2 className="text-lg font-bold text-green-700">Great news &mdash; we&apos;re in your area</h2>
                   </div>
                   <p className="text-slate-600 text-sm">
-                    We have crews in your neighborhood. Let&apos;s discuss your project.
+                    We&apos;ve got crews working right near you. Let&apos;s talk about your project.
                   </p>
                   <Button
                     onClick={handleGetStartedClick}
                     className="w-full bg-primary hover:bg-orange-600 text-primary-foreground font-semibold"
                   >
-                    Get Free Estimate
+                    Get My Free Estimate
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
@@ -145,10 +146,10 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { step: "1", text: "Tell us about your backyard or roof project" },
-              { step: "2", text: "Get matched with local outdoor specialists" },
-              { step: "3", text: "Receive your free, no-obligation estimate" },
-              { step: "4", text: "Start your transformation with no money down" },
+              { step: "1", text: "Tell us a little about the backyard or roof you have in mind" },
+              { step: "2", text: "We connect you with trusted local crews near you" },
+              { step: "3", text: "You get a free, no-pressure estimate to look over" },
+              { step: "4", text: "When you're ready, we start &mdash; with no money down" },
             ].map((item) => (
               <div key={item.step} className="rounded-xl border border-slate-200 bg-white p-5">
                 <div className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-50 text-primary font-bold mb-3">
