@@ -3,7 +3,7 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, Shield, ArrowRight, MapPin, Lock } from "lucide-react"
+import { CheckCircle, Shield, ArrowRight, MapPin, Lock, Flame, Zap } from "lucide-react"
 import { useRouter } from "next/navigation"
 
 interface HeroProps {
@@ -47,31 +47,37 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
           <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3 py-1 mb-5">
               <MapPin className="h-3.5 w-3.5 text-primary" />
-              <span className="text-xs font-medium text-slate-700">Proudly serving homeowners across California</span>
+              <span className="text-xs font-medium text-slate-700">Licensed &amp; insured &mdash; serving all of California</span>
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight text-balance mb-5">
-              Let&apos;s bring your backyard or roof to life
+              The backyard and roof upgrade you&apos;ve been waiting for &mdash; $0 down
             </h1>
 
             <p className="text-lg text-slate-600 leading-relaxed text-pretty mb-8">
-              From the coast to the valley, we help California families create the outdoor spaces they&apos;ve always
-              wanted &mdash; pools, landscaping, roofing, and patios. Tell us what you&apos;re dreaming up, and
-              we&apos;ll match you with trusted local crews. No upfront cost to get started.
+              From the coast to the valley, we build outdoor spaces California homeowners love &mdash; pools,
+              landscaping, patios, and Title&nbsp;24&ndash;compliant, fire-rated roofing. Tell us what you&apos;re
+              picturing and we&apos;ll match you with vetted local crews. No upfront cost to get started.
             </p>
 
             <ul className="space-y-3 mb-8">
               <li className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-700">Friendly options built around your budget &mdash; no pressure</span>
+                <Zap className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-slate-700">
+                  <span className="font-semibold text-slate-900">Title 24 energy-efficient</span> builds that may qualify for state rebates
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Flame className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-slate-700">
+                  <span className="font-semibold text-slate-900">Class A fire-rated roofing</span> with high R-value insulation
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-700">Energy-efficient upgrades that may qualify for rebates</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-700">Licensed, insured local crews who treat your home like their own</span>
+                <span className="text-slate-700">
+                  <span className="font-semibold text-slate-900">Permit-ready, code-compliant</span> work from licensed local crews
+                </span>
               </li>
             </ul>
 
@@ -81,7 +87,7 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
                 size="lg"
                 className="bg-primary hover:bg-orange-600 text-primary-foreground px-7 font-semibold"
               >
-                Get My Free Estimate
+                Claim My Free Estimate
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <div className="flex items-center gap-2 text-sm text-slate-500">
