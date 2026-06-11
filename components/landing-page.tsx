@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useCallback } from "react"
 import { Hero } from "./hero"
+import { ProjectGallery } from "./project-gallery"
+import { SurveyPreview } from "./survey-preview"
 import { ZipCodeChecker } from "./zip-code-checker"
 import { getSessionData, saveSessionData } from "@/lib/offline-storage"
 import { useRouter } from "next/navigation"
@@ -153,6 +155,14 @@ export function LandingPage() {
           zipVerified={isZipVerified}
           zipCodeCheckerSlot={<ZipCodeChecker onSuccess={handleZipCodeSuccess} />}
         />
+      </SectionErrorBoundary>
+
+      <SectionErrorBoundary name="ProjectGallery">
+        <ProjectGallery />
+      </SectionErrorBoundary>
+
+      <SectionErrorBoundary name="SurveyPreview">
+        <SurveyPreview />
       </SectionErrorBoundary>
 
       {/* Personal Video Popup */}
