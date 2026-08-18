@@ -7,14 +7,14 @@ import { Textarea } from "@/components/ui/textarea"
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-lime-50 to-white">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-12 w-12 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 flex items-center justify-center">
-                <Building2 className="h-6 w-6 text-white" />
+              <div className="h-12 w-12 rounded-lg bg-primary flex items-center justify-center">
+                <Building2 className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
                 <h1 className="text-3xl font-bold text-slate-900">Contact Consult&Build™</h1>
@@ -29,7 +29,7 @@ export default function ContactPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Mail className="h-5 w-5 text-orange-500" />
+                    <Mail className="h-5 w-5 text-primary" />
                     Email Us
                   </CardTitle>
                   <CardDescription>Send us a message and we'll respond within 24 hours</CardDescription>
@@ -37,7 +37,7 @@ export default function ContactPage() {
                 <CardContent>
                   <a
                     href="mailto:info@consultbuildca.com"
-                    className="text-lg font-semibold text-orange-600 hover:text-orange-700 transition-colors"
+                    className="text-lg font-semibold text-primary hover:text-primary/80 transition-colors"
                   >
                     info@consultbuildca.com
                   </a>
@@ -47,7 +47,7 @@ export default function ContactPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <MapPin className="h-5 w-5 text-orange-500" />
+                    <MapPin className="h-5 w-5 text-primary" />
                     Service Area
                   </CardTitle>
                   <CardDescription>We serve homeowners throughout California</CardDescription>
@@ -56,7 +56,7 @@ export default function ContactPage() {
                   <p className="text-slate-700">
                     Statewide California Service
                     <br />
-                    Licensed Contractor Network
+                    Licensed Landscaping &amp; Hardscaping Network
                     <br />
                     All Major Cities & Counties
                   </p>
@@ -66,7 +66,7 @@ export default function ContactPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Clock className="h-5 w-5 text-orange-500" />
+                    <Clock className="h-5 w-5 text-primary" />
                     Response Time
                   </CardTitle>
                   <CardDescription>When you can expect to hear from us</CardDescription>
@@ -77,7 +77,7 @@ export default function ContactPage() {
                     <br />
                     Consultation scheduling: Same day
                     <br />
-                    Contractor matching: 24-48 hours
+                    Crew matching: 24-48 hours
                   </p>
                 </CardContent>
               </Card>
@@ -113,7 +113,7 @@ export default function ContactPage() {
                     <Label htmlFor="message">Message</Label>
                     <Textarea id="message" placeholder="Tell us how we can help you..." className="min-h-[120px]" />
                   </div>
-                  <Button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600">
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
                     Send Message
                   </Button>
                 </form>
@@ -127,9 +127,9 @@ export default function ContactPage() {
               <CardContent className="pt-6">
                 <h3 className="text-xl font-semibold mb-4">About Our Service</h3>
                 <p className="text-slate-600 max-w-2xl mx-auto">
-                  Consult&Build™ is California's premier contractor matching service. We connect homeowners with
-                  pre-screened, licensed contractors and compensate you for your consultation time. Our goal is to make
-                  home improvement projects stress-free and rewarding.
+                  Consult&Build™ is California's premier landscaping and hardscaping matching service. We connect
+                  homeowners with pre-screened, licensed outdoor crews and compensate you for your consultation time.
+                  Our goal is to make backyard and outdoor projects stress-free and rewarding.
                 </p>
               </CardContent>
             </Card>

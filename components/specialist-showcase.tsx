@@ -11,8 +11,8 @@ export function SpecialistShowcase() {
       <div className="container px-4">
         <LazySection animationDirection="up" delay={100}>
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold mb-2">Meet Our Home Specialists</h2>
-            <p className="text-muted-foreground">Friendly experts who feel like family</p>
+            <h2 className="text-2xl font-bold mb-2">Meet Our Outdoor Specialists</h2>
+            <p className="text-muted-foreground">Friendly landscaping experts who feel like family</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -29,9 +29,9 @@ export function SpecialistShowcase() {
                 </div>
                 <div className="p-4 text-center">
                   <h3 className="font-bold text-lg">James</h3>
-                  <p className="text-blue-600 text-sm mb-2">Kitchen & Bath Expert</p>
+                  <p className="text-blue-600 text-sm mb-2">Hardscape & Patio Expert</p>
                   <p className="text-sm text-gray-600 mb-3">
-                    "I love helping families create spaces where they can make memories together."
+                    "I love helping families create outdoor spaces where they can make memories together."
                   </p>
                   <div className="flex justify-center gap-2">
                     <span className="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-full flex items-center gap-1">
@@ -55,9 +55,9 @@ export function SpecialistShowcase() {
                 </div>
                 <div className="p-4 text-center">
                   <h3 className="font-bold text-lg">Maria</h3>
-                  <p className="text-blue-600 text-sm mb-2">Home Addition Specialist</p>
+                  <p className="text-blue-600 text-sm mb-2">Planting & Irrigation Specialist</p>
                   <p className="text-sm text-gray-600 mb-3">
-                    "I treat every home as if it were my own, with care and attention to detail."
+                    "I treat every garden as if it were my own, with care and attention to detail."
                   </p>
                   <div className="flex justify-center gap-2">
                     <span className="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-full flex items-center gap-1">
@@ -81,9 +81,9 @@ export function SpecialistShowcase() {
                 </div>
                 <div className="p-4 text-center">
                   <h3 className="font-bold text-lg">Robert</h3>
-                  <p className="text-blue-600 text-sm mb-2">Roofing & Exterior Pro</p>
+                  <p className="text-blue-600 text-sm mb-2">Retaining Wall & Drainage Pro</p>
                   <p className="text-sm text-gray-600 mb-3">
-                    "Your home protects your family. I make sure it's safe and beautiful."
+                    "A solid foundation makes a yard last. I make sure yours is safe and beautiful."
                   </p>
                   <div className="flex justify-center gap-2">
                     <span className="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-full flex items-center gap-1">

@@ -62,18 +62,17 @@ export function Survey({ formData, onFormChange, onNextStep, onPrevStep }: Surve
   }
 
   const projectTypes = [
-    { value: "solar", label: "Solar Panel Installation" },
-    { value: "kitchen", label: "Kitchen Remodeling" },
-    { value: "bathroom", label: "Bathroom Renovation" },
-    { value: "roofing", label: "Roofing Services" },
-    { value: "hvac", label: "HVAC Systems" },
-    { value: "flooring", label: "Flooring Installation" },
-    { value: "windows", label: "Windows & Doors" },
-    { value: "addition", label: "Home Addition" },
-    { value: "exterior", label: "Exterior Renovation" },
-    { value: "electrical", label: "Electrical Systems" },
-    { value: "plumbing", label: "Plumbing Services" },
-    { value: "landscaping", label: "Landscaping & Hardscaping" },
+    { value: "patio-driveway", label: "Paver Patio & Driveway" },
+    { value: "retaining-wall", label: "Retaining Walls" },
+    { value: "outdoor-kitchen", label: "Outdoor Kitchen & Fire Pit" },
+    { value: "pool-water", label: "Pools & Water Features" },
+    { value: "turf", label: "Artificial Turf & Lawns" },
+    { value: "planting-irrigation", label: "Planting & Irrigation" },
+    { value: "landscape-lighting", label: "Outdoor Lighting" },
+    { value: "walkways", label: "Walkways & Steps" },
+    { value: "outdoor-living", label: "Pergolas & Outdoor Living" },
+    { value: "drainage", label: "Grading & Drainage" },
+    { value: "full-landscape", label: "Full Landscape Design" },
     { value: "other", label: "Other Project" },
   ]
 
@@ -180,7 +179,7 @@ export function Survey({ formData, onFormChange, onNextStep, onPrevStep }: Surve
                 name="otherProjectSpecify"
                 value={formData.otherProjectSpecify || ""}
                 onChange={handleInputChange}
-                placeholder="e.g., Pool Installation, Deck Construction, Basement Finishing"
+                placeholder="e.g., Putting green, Deck construction, Xeriscaping"
                 className="h-11 border-slate-300 focus:border-blue-600 rounded-lg"
               />
             </div>

@@ -3,7 +3,7 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, Shield, ArrowRight, MapPin, Lock, Flame, Zap } from "lucide-react"
+import { CheckCircle, Shield, ArrowRight, MapPin, Lock, Trees, Hammer } from "lucide-react"
 import { useRouter } from "next/navigation"
 
 interface HeroProps {
@@ -51,29 +51,31 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.1] text-balance mb-6">
-              Upgrade your backyard or roof with $0 down
+              Transform your backyard with $0 down
             </h1>
 
             <p className="text-lg text-slate-600 leading-relaxed text-pretty mb-6">
-              From the coast to the valley, we design and build outdoor spaces California homeowners love: pools,
-              landscaping, patios, and Title&nbsp;24 compliant, fire-rated roofing. Tell us what you have in mind and
-              we&apos;ll match you with vetted local crews, with no upfront cost to get started.
+              From the coast to the valley, we design and build the outdoor spaces California homeowners love: paver
+              patios and driveways, retaining walls, outdoor kitchens and fire pits, pools and water features,
+              artificial turf, planting, and landscape lighting. Tell us what you have in mind and we&apos;ll match you
+              with vetted local landscaping and hardscaping crews, with no upfront cost to get started.
             </p>
 
             <div className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-4 mb-8">
-              <Zap className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+              <Trees className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
               <p className="text-sm text-slate-700">
-                <span className="font-semibold text-slate-900">You may qualify for state rebates.</span> Energy-efficient
-                Title&nbsp;24 upgrades can reduce your project cost. We&apos;ll confirm your eligibility for free.
+                <span className="font-semibold text-slate-900">Water-wise designs that save you money.</span>{" "}
+                Drought-tolerant planting and turf conversions may qualify for local rebates. We&apos;ll help you find
+                out for free.
               </p>
             </div>
 
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3">
-                <Flame className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <Hammer className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="font-semibold text-slate-900">Class A fire-rated roofing</p>
-                  <p className="text-sm text-slate-600">Built to California fire code with high R-value insulation.</p>
+                  <p className="font-semibold text-slate-900">Custom hardscaping, built to last</p>
+                  <p className="text-sm text-slate-600">Pavers, stone walls, walkways, and outdoor living areas.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -89,7 +91,7 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
               <Button
                 onClick={handleGetStartedClick}
                 size="lg"
-                className="bg-primary hover:bg-orange-600 text-primary-foreground px-7 font-semibold"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-7 font-semibold"
               >
                 Get My Free Estimate
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -105,8 +107,8 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="/backyard-adu-construction.png"
-                alt="Completed backyard remodel by a Consult and Build CA crew"
+                src="/projects/landscape-hero.png"
+                alt="Completed backyard hardscape with paver patio, outdoor kitchen, and fire pit by a Consult and Build CA crew"
                 className="w-full h-72 lg:h-[420px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent" />
@@ -138,7 +140,7 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
                   </p>
                   <Button
                     onClick={handleGetStartedClick}
-                    className="w-full bg-primary hover:bg-orange-600 text-primary-foreground font-semibold"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
                   >
                     Get My Free Estimate
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -157,8 +159,8 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { step: "1", text: "Tell us about the backyard or roof project you have in mind." },
-              { step: "2", text: "We connect you with trusted, licensed local crews near you." },
+              { step: "1", text: "Tell us about the outdoor project you have in mind." },
+              { step: "2", text: "We connect you with trusted, licensed local landscaping crews near you." },
               { step: "3", text: "You receive a free, no-pressure estimate to review." },
               { step: "4", text: "When you're ready, we begin with no money down." },
             ].map((item) => (

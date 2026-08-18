@@ -9,7 +9,7 @@ export function TrustElements() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Professional Credentials & Service Excellence</h2>
             <p className="text-lg text-slate-700 max-w-2xl mx-auto">
-              Licensed contractors delivering superior results across all construction disciplines
+              Licensed landscaping and hardscaping crews delivering superior results across every outdoor discipline
             </p>
           </div>
 
@@ -50,21 +50,21 @@ export function TrustElements() {
 
           {/* Service categories */}
           <div className="bg-slate-50 rounded-lg p-8 border border-slate-200 mb-8">
-            <h3 className="text-2xl font-semibold text-center text-slate-900 mb-8">Construction Specializations</h3>
+            <h3 className="text-2xl font-semibold text-center text-slate-900 mb-8">Landscaping & Hardscaping Specializations</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {[
-                "Solar Panel Installation",
-                "Kitchen Remodeling",
-                "Bathroom Renovation",
-                "Roofing Services",
-                "HVAC Systems",
-                "Electrical Work",
-                "Flooring Installation",
-                "Windows & Doors",
-                "Home Additions",
-                "Exterior Renovation",
-                "Plumbing Services",
-                "Landscaping & Hardscaping",
+                "Paver Patios & Driveways",
+                "Retaining Walls",
+                "Outdoor Kitchens & Fire Pits",
+                "Pools & Water Features",
+                "Artificial Turf & Lawns",
+                "Planting & Irrigation",
+                "Outdoor Lighting",
+                "Walkways & Steps",
+                "Pergolas & Outdoor Living",
+                "Grading & Drainage",
+                "Xeriscaping & Drought Design",
+                "Full Landscape Design",
               ].map((service, index) => (
                 <div
                   key={index}

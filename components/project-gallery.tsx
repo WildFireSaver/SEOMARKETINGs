@@ -2,33 +2,33 @@
 
 const projects = [
   {
-    src: "/projects/modern-kitchen-hero.png",
-    title: "Kitchen remodel",
+    src: "/projects/paver-patio.png",
+    title: "Paver patio & driveway",
     location: "Los Angeles, CA",
   },
   {
-    src: "/projects/roof-replacement-hero.png",
-    title: "Class A roof replacement",
+    src: "/projects/retaining-wall.png",
+    title: "Stacked-stone retaining wall",
     location: "Fresno, CA",
   },
   {
-    src: "/backyard-adu-construction.png",
-    title: "Backyard ADU build",
+    src: "/projects/outdoor-kitchen.png",
+    title: "Outdoor kitchen & fire pit",
     location: "San Diego, CA",
   },
   {
-    src: "/projects/luxury-bathroom-hero.png",
-    title: "Bathroom renovation",
+    src: "/projects/pool-waterfeature.png",
+    title: "Pool & water feature",
     location: "San Francisco, CA",
   },
   {
-    src: "/projects/exterior-makeover-hero.png",
-    title: "Exterior makeover",
+    src: "/projects/artificial-turf.png",
+    title: "Artificial turf & planters",
     location: "Sacramento, CA",
   },
   {
-    src: "/modern-roof-installation.png",
-    title: "Title 24 roof system",
+    src: "/projects/garden-lighting.png",
+    title: "Landscape lighting & planting",
     location: "Riverside, CA",
   },
 ]
@@ -42,8 +42,8 @@ export function ProjectGallery() {
             Recent projects across California
           </h2>
           <p className="text-lg text-slate-600 text-pretty">
-            A look at the kind of work our licensed local crews deliver, from full roof replacements to complete
-            backyard transformations.
+            A look at the kind of work our licensed local crews deliver, from custom paver patios and retaining walls
+            to complete backyard transformations.
           </p>
         </div>
 

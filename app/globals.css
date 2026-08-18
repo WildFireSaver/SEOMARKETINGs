@@ -13,8 +13,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 224 71.4% 4.1%;
 
-    /* Primary is now a Lighter Orange (e.g., orange-500) */
-    --primary: 24 95% 53%; /* Orange-500: hsl(24, 95%, 53%) approx. #f97316 */
+    /* Primary is a natural garden green for landscaping */
+    --primary: 142 46% 30%; /* Deep garden green approx. #2b7a45 */
     --primary-foreground: 0 0% 100%; /* White for contrast */
 
     --secondary: 220 13% 91%; /* Neutral-100 */
@@ -23,22 +23,22 @@
     --muted: 220 14.3% 95.9%; /* Neutral-200 */
     --muted-foreground: 220 8.9% 46.1%; /* Neutral-500 */
 
-    --accent: 45 93% 56%; /* Yellow-400: hsl(45, 93%, 56%) approx. #facc15 */
-    --accent-foreground: 224 71.4% 4.1%; /* Dark text for yellow */
+    --accent: 28 45% 50%; /* Warm stone/terracotta clay for hardscape accents */
+    --accent-foreground: 0 0% 100%; /* Light text on clay */
 
     --destructive: 0 84.2% 60.2%; /* Red-500 */
     --destructive-foreground: 0 0% 100%;
 
     --border: 220 13% 86%; /* Neutral-300 */
     --input: 220 13% 86%;
-    --ring: 24 95% 53%; /* Lighter Orange (orange-500) for focus ring */
+    --ring: 142 46% 30%; /* Garden green for focus ring */
 
     --radius: 0.75rem; /* Example radius */
-    --chart-1: 24 95% 60%;
-    --chart-2: 45 93% 58%;
-    --chart-3: 0 0% 60%;
-    --chart-4: 0 0% 40%;
-    --chart-5: 60 100% 70%;
+    --chart-1: 142 46% 38%;
+    --chart-2: 28 45% 52%;
+    --chart-3: 90 30% 45%;
+    --chart-4: 0 0% 45%;
+    --chart-5: 160 40% 40%;
   }
 
   .dark {
@@ -51,7 +51,7 @@
     --popover: 224 71.4% 4.1%;
     --popover-foreground: 210 20% 98%;
 
-    --primary: 24 95% 53%; /* Lighter Orange (orange-500) */
+    --primary: 142 45% 42%; /* Brighter garden green for dark mode */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 215 27.9% 16.9%; /* Dark Neutral-800 */
@@ -60,20 +60,20 @@
     --muted: 215 27.9% 16.9%;
     --muted-foreground: 217.9 10.6% 64.9%; /* Dark Neutral-400 */
 
-    --accent: 45 93% 56%; /* Yellow-400 */
-    --accent-foreground: 224 71.4% 4.1%;
+    --accent: 28 45% 55%; /* Warm stone/terracotta clay */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 215 20.2% 25.1%; /* Dark Neutral-700 */
     --input: 215 20.2% 25.1%;
-    --ring: 24 95% 53%; /* Lighter Orange (orange-500) */
-    --chart-1: 24 95% 65%;
-    --chart-2: 45 93% 63%;
-    --chart-3: 0 0% 50%;
-    --chart-4: 0 0% 30%;
-    --chart-5: 60 100% 75%;
+    --ring: 142 45% 42%; /* Garden green */
+    --chart-1: 142 45% 50%;
+    --chart-2: 28 45% 58%;
+    --chart-3: 90 30% 50%;
+    --chart-4: 0 0% 55%;
+    --chart-5: 160 40% 48%;
   }
 }
 
@@ -152,7 +152,7 @@
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 30px rgba(249, 115, 22, 0.3);
+  box-shadow: 0 0 30px rgba(43, 122, 69, 0.3);
   transform: translateY(-2px);
 }
 
@@ -173,7 +173,7 @@
 
 /* Gradient Backgrounds */
 .gradient-primary {
-  background: linear-gradient(135deg, #f97316, #eab308);
+  background: linear-gradient(135deg, #2b7a45, #6b8e23);
 }
 
 .gradient-secondary {
@@ -181,7 +181,7 @@
 }
 
 .gradient-accent {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  background: linear-gradient(135deg, #c08457, #a86b3c);
 }
 
 .gradient-success {
@@ -190,14 +190,14 @@
 
 /* Text Effects */
 .text-gradient {
-  background: linear-gradient(135deg, #f97316, #eab308);
+  background: linear-gradient(135deg, #2b7a45, #6b8e23);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-shimmer {
-  background: linear-gradient(90deg, #64748b, #f97316, #64748b);
+  background: linear-gradient(90deg, #64748b, #2b7a45, #64748b);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -214,7 +214,7 @@
 
 /* Progress Indicators */
 .progress-bar {
-  background: linear-gradient(90deg, #f97316, #eab308);
+  background: linear-gradient(90deg, #2b7a45, #6b8e23);
   animation: progress 2s ease-in-out;
 }
 
@@ -307,12 +307,12 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #f97316;
+  background: #2b7a45;
   border-radius: 4px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #ea580c;
+  background: #1f5d34;
 }
 
 /* Smooth Scrolling */

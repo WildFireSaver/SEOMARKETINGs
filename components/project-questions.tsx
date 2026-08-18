@@ -124,7 +124,7 @@ export function ProjectQuestions({ formData, onFormChange, onNextStep, onPrevSte
               id="otherProjectSpecify"
               value={formData.otherProjectSpecify || ""}
               onChange={handleOtherProjectDetailsChange}
-              placeholder="e.g., Landscaping, Window Replacement"
+              placeholder="e.g., Putting green, Xeriscaping"
               className={cn("h-11", errors.otherProjectSpecify ? "border-red-400 bg-red-50" : "border-gray-300")}
             />
             {errors.otherProjectSpecify && <p className="text-xs text-red-600 mt-1">{errors.otherProjectSpecify}</p>}

@@ -15,7 +15,7 @@ export function Header() {
             </div>
             <div>
               <div className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">Consult &amp; Build CA</div>
-              <div className="text-xs text-slate-500 hidden sm:block">Licensed California Contractor Network</div>
+              <div className="text-xs text-slate-500 hidden sm:block">Licensed California Landscaping &amp; Hardscaping</div>
             </div>
           </Link>
 

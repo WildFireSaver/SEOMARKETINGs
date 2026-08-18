@@ -16,8 +16,8 @@ export function Footer() {
               <span className="text-xl font-bold text-white tracking-tight">Consult &amp; Build CA</span>
             </div>
             <p className="text-sm mb-4 text-slate-400">
-              Connecting California homeowners with licensed, pre-screened contractors for quality home improvement
-              projects.
+              Connecting California homeowners with licensed, pre-screened landscaping and hardscaping crews for
+              patios, retaining walls, outdoor living, and complete backyard transformations.
             </p>
             <div className="flex space-x-4 justify-center md:justify-start">
               <Link
@@ -87,7 +87,7 @@ export function Footer() {
 
         <div className="border-t border-slate-800 pt-8 text-center text-sm text-slate-400">
           <p>&copy; {new Date().getFullYear()} Consult &amp; Build CA. All rights reserved.</p>
-          <p className="mt-1">Licensed California Home Improvement Network.</p>
+          <p className="mt-1">Licensed California Landscaping &amp; Hardscaping Network.</p>
         </div>
       </div>
     </footer>

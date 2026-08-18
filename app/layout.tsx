@@ -9,17 +9,17 @@ import { ErrorBoundary } from "@/components/error-boundary"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Consult & Build CA – Professional California Contractor Network",
+  title: "Consult & Build CA – California Landscaping & Hardscaping",
   description:
-    "Connect with licensed, pre-screened contractors in California. Professional consultations for home-improvement projects with quality assurance and expert matching.",
-  openGraph: { title: "Consult & Build CA" },
-  twitter: { card: "summary_large_image", title: "Consult & Build CA" },
+    "Connect with licensed, pre-screened landscaping and hardscaping crews across California. Paver patios, retaining walls, outdoor kitchens, pools, turf, and complete backyard transformations, with free estimates.",
+  openGraph: { title: "Consult & Build CA – California Landscaping & Hardscaping" },
+  twitter: { card: "summary_large_image", title: "Consult & Build CA – California Landscaping & Hardscaping" },
     generator: 'v0.app'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="bg-background">
       <body className={inter.className}>
         <ErrorBoundary>
           <div className="text-black">
