@@ -10,7 +10,7 @@ export function SeoCta({
   subheading?: string
 }) {
   return (
-    <section className="my-14 rounded-2xl bg-slate-900 px-6 py-10 text-center sm:px-10">
+    <section className="mx-auto my-14 max-w-6xl rounded-2xl bg-slate-900 px-6 py-10 text-center sm:px-10">
       <h2 className="text-2xl font-bold text-white sm:text-3xl text-balance">{heading}</h2>
       <p className="mx-auto mt-3 max-w-2xl text-slate-300 text-pretty">{subheading}</p>
       <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
