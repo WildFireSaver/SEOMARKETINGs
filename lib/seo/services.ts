@@ -419,7 +419,7 @@ export const SERVICES: Service[] = [
     ],
     h1: "Landscape Design, Planting & Irrigation",
     tagline: "Water-wise, climate-appropriate landscapes designed for the SoCal seasons.",
-    image: "/projects/garden-lighting.png",
+    image: "/projects/planting-design.png",
     intro: [
       "Great landscaping starts with a plan that fits your site, your climate, and how you actually use your yard. Our designers create planting plans built around drought-tolerant and California-native species that thrive in Southern California's dry summers and mild winters, so your yard looks full without demanding constant water.",
       "From full front-yard redesigns to backyard gardens, we handle soil prep, planting, mulch, and efficient drip irrigation, and design for how the space will look as it matures, not just on install day.",
@@ -562,7 +562,7 @@ export const SERVICES: Service[] = [
     ],
     h1: "Yard Drainage & Grading Solutions",
     tagline: "Stop pooling, erosion, and runoff before they damage your home and landscape.",
-    image: "/projects/retaining-wall.png",
+    image: "/projects/drainage-grading.png",
     intro: [
       "Southern California's rain comes in short, intense bursts, and yards that aren't graded and drained properly end up with standing water, eroded beds, and runoff pushed toward the foundation. Drainage is the unglamorous work that protects everything else you build outdoors.",
       "Our crews diagnose where water is going and install French drains, channel drains, catch basins, dry wells, and corrective grading to route it safely away from your home and hardscape. It's the foundation that keeps patios, walls, and planting from failing prematurely.",

@@ -28,7 +28,7 @@ export const LOCATIONS: Location[] = [
       "backyard remodel la",
       "artificial turf los angeles",
     ],
-    image: "/california/los-angeles-skyline.png",
+    image: "/california/los-angeles-backyard.png",
     intro: [
       "Los Angeles backyards range from compact hillside lots in the canyons to sprawling flat yards in the Valley, and each calls for a different approach to hardscaping and planting. Our vetted LA crews design outdoor spaces that make the most of the city's year-round outdoor climate.",
       "From drought-tolerant front yards in response to LADWP water rules to entertaining patios and outdoor kitchens on the Westside, we match Los Angeles homeowners with licensed crews who know the local soils, slopes, and permitting.",
@@ -76,7 +76,7 @@ export const LOCATIONS: Location[] = [
       "artificial turf san diego",
       "backyard design san diego",
     ],
-    image: "/california/san-diego-homes.png",
+    image: "/california/san-diego-backyard.png",
     intro: [
       "San Diego's near-perfect climate makes outdoor living a year-round priority, and its coastal-to-inland range means everything from salt-tolerant planting near the coast to full sun designs inland. Our San Diego crews build hardscapes and landscapes tuned to each microclimate.",
       "Whether you're in a coastal community dealing with wind and salt air or an inland neighborhood with hot summers, we match you with licensed crews experienced in San Diego soils, slopes, and water-wise design.",
@@ -124,7 +124,7 @@ export const LOCATIONS: Location[] = [
       "artificial turf long beach",
       "backyard remodel long beach",
     ],
-    image: "/california/los-angeles-skyline.png",
+    image: "/california/long-beach-backyard.png",
     intro: [
       "Long Beach blends coastal breezes with classic Southern California lots, and its established neighborhoods often feature smaller, well-defined yards that reward smart hardscape design. Our Long Beach crews maximize compact spaces with patios, turf, and low-water planting.",
       "From historic districts to waterfront homes, we match Long Beach homeowners with licensed crews who understand coastal conditions and the character of the city's neighborhoods.",
@@ -172,7 +172,7 @@ export const LOCATIONS: Location[] = [
       "artificial turf riverside",
       "backyard design riverside",
     ],
-    image: "/california/san-francisco-houses.png",
+    image: "/california/riverside-backyard.png",
     intro: [
       "Riverside's hot inland summers make heat-smart landscaping and shade-focused hardscape design essential. Our Riverside crews build outdoor spaces that stay usable in the heat, shade structures, cool decking, and drought-tolerant planting that thrives in the Inland Empire.",
       "With larger lots common in the area, Riverside homeowners often invest in full backyard transformations. We match you with licensed crews who understand the region's heat, soils, and water needs.",
@@ -220,7 +220,7 @@ export const LOCATIONS: Location[] = [
       "artificial turf anaheim",
       "backyard remodel orange county",
     ],
-    image: "/california/san-diego-homes.png",
+    image: "/california/anaheim-backyard.png",
     intro: [
       "Anaheim's Orange County setting combines warm, sunny weather with a mix of established and newer neighborhoods. Our Anaheim crews build entertaining-focused backyards, patios, outdoor kitchens, and turf, that take full advantage of the OC climate.",
       "From the hills to the flatlands, we match Anaheim homeowners with licensed crews experienced in Orange County soils, HOA requirements, and water-wise design.",
@@ -268,7 +268,7 @@ export const LOCATIONS: Location[] = [
       "artificial turf irvine",
       "modern backyard design irvine",
     ],
-    image: "/california/san-diego-homes.png",
+    image: "/california/irvine-backyard.png",
     intro: [
       "Irvine's master-planned communities favor clean, modern, and low-maintenance outdoor design, and its HOAs often have specific standards. Our Irvine crews specialize in polished, water-wise backyards that fit the city's contemporary aesthetic and community guidelines.",
       "From efficient turf lawns to sleek paver patios and modern planting, we match Irvine homeowners with licensed crews experienced in the area's HOA approvals and design expectations.",
@@ -316,7 +316,7 @@ export const LOCATIONS: Location[] = [
       "artificial turf santa ana",
       "backyard design santa ana",
     ],
-    image: "/california/los-angeles-skyline.png",
+    image: "/california/santa-ana-backyard.png",
     intro: [
       "Santa Ana's established Orange County neighborhoods feature classic lots that benefit from thoughtful hardscape and water-wise updates. Our Santa Ana crews refresh older yards with durable patios, efficient turf, and drought-tolerant planting.",
       "From historic districts to newer developments, we match Santa Ana homeowners with licensed crews who deliver quality hardscaping and landscaping at fair value.",
@@ -364,7 +364,7 @@ export const LOCATIONS: Location[] = [
       "stone wall pasadena",
       "drought tolerant garden pasadena",
     ],
-    image: "/california/san-francisco-houses.png",
+    image: "/california/pasadena-backyard.png",
     intro: [
       "Pasadena's historic Craftsman and Spanish homes and its foothill setting call for landscaping that honors architectural character while handling slopes and seasonal runoff. Our Pasadena crews build natural stone hardscape, classic gardens, and drought-tolerant designs that fit the city's heritage.",
       "From the foothills to the historic districts, we match Pasadena homeowners with licensed crews experienced in period-appropriate materials, retaining walls, and water-wise planting.",
