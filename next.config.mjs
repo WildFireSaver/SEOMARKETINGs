@@ -8,7 +8,34 @@ typescript: {
 },
 images: {
   unoptimized: true, // As per your project's existing configuration
-}
+},
+// Consolidate ranking signals on the apex domain: 301 www -> non-www so it
+// matches every canonical tag (https://consultbuildca.com) and the sitemap.
+async redirects() {
+  return [
+    {
+      source: "/:path*",
+      has: [{ type: "host", value: "www.consultbuildca.com" }],
+      destination: "https://consultbuildca.com/:path*",
+      permanent: true,
+    },
+  ]
+},
+// Baseline security headers for the deployed site (defense-in-depth).
+async headers() {
+  return [
+    {
+      source: "/:path*",
+      headers: [
+        { key: "X-Content-Type-Options", value: "nosniff" },
+        { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+        { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
+        { key: "X-Frame-Options", value: "SAMEORIGIN" },
+        { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+      ],
+    },
+  ]
+},
 }
 
 // Import the maintained PWA package
