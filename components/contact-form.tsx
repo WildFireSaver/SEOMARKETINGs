@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { ArrowLeft, DollarSign } from "lucide-react" // Added AlertTriangle, CheckCircle
+import { ArrowLeft, CheckCircle2 } from "lucide-react"
 import { PhoneInput } from "./phone-input"
 import { isValidEmail, isValidPhone } from "./form-validation" // Keep client-side validation for immediate feedback
 import { cn } from "@/lib/utils"
@@ -78,7 +78,7 @@ export function ContactForm({ formData, onFormChange, onSubmissionSuccess, onPre
     } else {
       // Track form submission
       trackFormSubmission(formData.projectType, formData.timelineAndBudget)
-      trackCTAClick("contact-form", "Get My Cash Reward")
+      trackCTAClick("contact-form", "Get My Free Consultation")
 
       // If client-side validation passes, allow the form to submit to Formspree
       setIsSubmitting(true) // Set submitting state
@@ -118,14 +118,14 @@ export function ContactForm({ formData, onFormChange, onSubmissionSuccess, onPre
           {/* Remove general server message display */}
 
           <div className="space-y-5">
-            <div className="rounded-lg bg-amber-50 p-4 border border-amber-200">
+            <div className="rounded-lg bg-primary/5 p-4 border border-primary/20">
               <div className="flex items-start gap-3">
-                <DollarSign className="h-8 w-8 text-amber-600 flex-shrink-0 mt-1" />
+                <CheckCircle2 className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800">Almost There!</h3>
                   <p className="text-sm text-muted-foreground">
-                    Complete this form to see if you qualify for up to $100 cash and get matched with your perfect
-                    specialist.
+                    Complete this form and we&apos;ll match you with a licensed local landscaping specialist for your
+                    free, no-obligation consultation.
                   </p>
                 </div>
               </div>
@@ -354,7 +354,7 @@ export function ContactForm({ formData, onFormChange, onSubmissionSuccess, onPre
                 <span className="ml-2 inline-block h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent"></span>
               </span>
             ) : (
-              "Get My Cash Reward"
+              "Get My Free Consultation"
             )}
           </Button>
         </CardFooter>

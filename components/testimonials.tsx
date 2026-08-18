@@ -160,11 +160,8 @@ export function Testimonials() {
                               <p className="text-slate-500 text-sm">{testimonial.location}</p>
                             </div>
                             <div className="flex flex-wrap gap-2">
-                              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                              <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
                                 {testimonial.projectType}
-                              </span>
-                              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                                ${testimonial.consultationFee} Consultation Fee
                               </span>
                             </div>
                             <div className="grid grid-cols-2 gap-4 pt-2">
