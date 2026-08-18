@@ -10,7 +10,6 @@ import { getSessionData, saveSessionData } from "@/lib/offline-storage"
 import { useRouter } from "next/navigation"
 import { SectionErrorBoundary } from "./error-boundary"
 import { useErrorHandler } from "@/hooks/use-error-handler"
-import { PersonalVideoPopup } from "./personal-video-popup"
 
 function LoadingComponent() {
   return (
@@ -207,9 +206,6 @@ export function LandingPage() {
           </div>
         </section>
       </SectionErrorBoundary>
-
-      {/* Personal Video Popup */}
-      <PersonalVideoPopup />
     </div>
   )
 }
