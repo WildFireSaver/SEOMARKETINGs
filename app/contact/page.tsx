@@ -127,9 +127,9 @@ export default function ContactPage() {
               <CardContent className="pt-6">
                 <h3 className="text-xl font-semibold mb-4">About Our Service</h3>
                 <p className="text-slate-600 max-w-2xl mx-auto">
-                  Consult&Build™ is California's premier landscaping and hardscaping matching service. We connect
-                  homeowners with pre-screened, licensed outdoor crews and compensate you for your consultation time.
-                  Our goal is to make backyard and outdoor projects stress-free and rewarding.
+                  Consult &amp; Build CA is California&apos;s premier landscaping and hardscaping matching service. We
+                  connect homeowners with pre-screened, licensed outdoor crews and provide free, no-obligation
+                  consultations. Our goal is to make backyard and outdoor projects stress-free from design to build.
                 </p>
               </CardContent>
             </Card>

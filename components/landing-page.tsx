@@ -11,17 +11,6 @@ import { useRouter } from "next/navigation"
 import { SectionErrorBoundary } from "./error-boundary"
 import { useErrorHandler } from "@/hooks/use-error-handler"
 
-function LoadingComponent() {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-600 mx-auto"></div>
-        <p className="mt-4 text-lg text-slate-700">Loading...</p>
-      </div>
-    </div>
-  )
-}
-
 const defaultSessionState = {
   formData: {
     zipCode: "",
@@ -126,9 +115,10 @@ export function LandingPage() {
     }
   }, [router, handleError])
 
-  if (!isLoaded) {
-    return <LoadingComponent />
-  }
+  // NOTE: we intentionally do NOT block rendering on `isLoaded`. Session data
+  // is restored in an effect after hydration, so gating here made the server
+  // render an empty spinner — meaning Googlebot indexed a page with no H1 or
+  // content. Rendering immediately keeps the page crawlable.
 
   if (error) {
     return (

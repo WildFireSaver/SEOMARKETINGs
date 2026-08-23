@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { CheckCircle, Shield, ArrowRight, MapPin, Lock, Trees, Hammer } from "lucide-react"
 import { useRouter } from "next/navigation"
@@ -13,12 +12,7 @@ interface HeroProps {
 }
 
 export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: HeroProps) {
-  const [mounted, setMounted] = useState(false)
   const router = useRouter()
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   const handleGetStartedClick = () => {
     if (onGetStarted) {
@@ -28,13 +22,8 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
     }
   }
 
-  if (!mounted) {
-    return (
-      <div className="flex items-center justify-center min-h-[calc(100vh-80px)] bg-white">
-        <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary"></div>
-      </div>
-    )
-  }
+  // The hero renders identically on the server and the client, so gating it
+  // behind a `mounted` flag only hid the H1 and body copy from crawlers.
 
   return (
     <section

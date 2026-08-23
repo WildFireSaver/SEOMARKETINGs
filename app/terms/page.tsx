@@ -29,27 +29,28 @@ export default function Terms() {
           Our job is to help you connect with professionals who do.
         </p>
 
-        <h2>2. About Our Cash Offer</h2>
+        <h2>2. About Our Free Consultations</h2>
         <ul>
           <li>
-            <strong>How it Works:</strong> If you meet our requirements, you can receive a cash offer (e.g., "up to
-            $100") from us, Consult & Build CA.
+            <strong>How it Works:</strong> If you meet our requirements, we match you with a licensed Construction
+            Company in your area and arrange a consultation at no cost to you.
           </li>
           <li>
-            <strong>When You Get It:</strong> We pay you this cash after you've had a confirmed consultation (that meets
-            any stated minimum duration, like 45 minutes) with one of the Construction Companies we connect you with.
+            <strong>No Payment From Us:</strong> We do not offer, promise, or pay any cash, gift cards, rewards, or
+            other compensation for attending a consultation.
           </li>
           <li>
-            <strong>No Strings Attached (Almost!):</strong> You don't have to hire the Construction Company or buy
-            anything to get the cash, as long as you complete the qualified consultation.
+            <strong>No Obligation:</strong> You are never required to hire the Construction Company or purchase
+            anything. Quotes are provided in writing for you to review on your own timeline.
           </li>
           <li>
-            <strong>Who Qualifies:</strong> We decide who qualifies for the offer based on our criteria.
+            <strong>Project Costs:</strong> Any amounts you pay for actual work are agreed directly between you and the
+            Construction Company you choose, under the terms of the quote you approve.
           </li>
         </ul>
 
         <h2>3. Who Can Use Our Service?</h2>
-        <p>To use our Service and be eligible for the cash offer, you need to:</p>
+        <p>To use our Service, you need to:</p>
         <ul>
           <li>Be 18 years old or older.</li>
           <li>Own the home where the consultation will happen.</li>

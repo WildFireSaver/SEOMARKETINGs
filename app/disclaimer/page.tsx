@@ -30,14 +30,14 @@ export default function Disclaimer() {
           <li>We are not responsible for the quality, timeliness, or cost of contractor work</li>
         </ul>
 
-        <h2>Consultation Compensation</h2>
-        <p>Regarding our consultation compensation program:</p>
+        <h2>Consultations and Estimates</h2>
+        <p>Regarding consultations arranged through our service:</p>
         <ul>
-          <li>Compensation ranges from $50-$100 based on consultation scope and duration</li>
-          <li>Payment is made after verified completion of qualifying consultation</li>
-          <li>Consultations must meet minimum duration and quality requirements</li>
-          <li>We reserve the right to verify consultation details with contractors</li>
-          <li>Compensation is our way of valuing your time, not a guarantee of contractor quality</li>
+          <li>Consultations and project estimates are provided free of charge</li>
+          <li>We do not pay cash, gift cards, or any other compensation for attending a consultation</li>
+          <li>There is no obligation to hire a contractor or purchase anything</li>
+          <li>Estimates are prepared by the independent contractor, not by us</li>
+          <li>Any payment for work is agreed directly between you and the contractor you select</li>
         </ul>
 
         <h2>No Warranties or Guarantees</h2>
