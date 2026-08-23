@@ -9,8 +9,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        // Keep funnel/utility routes out of the index; they hold no SEO value.
-        disallow: ["/survey", "/project-questions", "/contact-form", "/api/"],
+        // The funnel routes (/survey, /project-questions, /contact-form,
+        // /confirmation) are deliberately NOT disallowed here. They each send a
+        // `noindex` header via their route layout, and Google has to be able to
+        // crawl a page to see that directive — blocking them here would leave
+        // the URLs eligible for indexing while hiding the noindex from Google.
+        disallow: ["/api/"],
       },
     ],
     sitemap: absoluteUrl("/sitemap.xml"),

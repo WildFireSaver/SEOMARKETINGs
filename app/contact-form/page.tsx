@@ -67,9 +67,9 @@ export default function ContactFormPage() {
   return (
     <section aria-labelledby="form-step-heading" className="container max-w-3xl mx-auto px-3 py-5 sm:px-4 sm:py-8">
       <h2 id="form-step-heading" className="sr-only">
-        Home Renovation Qualification Form - Step 3 of {formSteps.length}
+        Landscaping Project Qualification Form - Step 3 of {formSteps.length}
       </h2>
-      <ProgressIndicator currentStep={currentStepIndex} steps={formSteps} />
+      <ProgressIndicator steps={formSteps} />
       <div className="my-4 text-center text-sm text-muted-foreground">
         Step {currentStepIndex + 1} of {formSteps.length}: {formSteps[currentStepIndex]?.label}
       </div>
