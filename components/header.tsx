@@ -21,7 +21,7 @@ export function Header() {
 
           <div className="flex items-center gap-4">
             <Button asChild>
-              <Link href="#check-eligibility">Check Eligibility</Link>
+              <Link href="/#check-eligibility">Check Eligibility</Link>
             </Button>
           </div>
         </div>

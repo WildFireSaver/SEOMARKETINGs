@@ -51,14 +51,15 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.1] text-balance mb-6">
-              Transform your backyard with $0 down
+              Your dream backyard, built by licensed California crews
             </h1>
 
             <p className="text-lg text-slate-600 leading-relaxed text-pretty mb-6">
               From the coast to the valley, we design and build the outdoor spaces California homeowners love: paver
               patios and driveways, retaining walls, outdoor kitchens and fire pits, pools and water features,
               artificial turf, planting, and landscape lighting. Tell us what you have in mind and we&apos;ll match you
-              with vetted local landscaping and hardscaping crews, with no upfront cost to get started.
+              with vetted local landscaping and hardscaping crews, then send you a clear, itemized quote before any work
+              begins.
             </p>
 
             <div className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-4 mb-8">
@@ -162,7 +163,7 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
               { step: "1", text: "Tell us about the outdoor project you have in mind." },
               { step: "2", text: "We connect you with trusted, licensed local landscaping crews near you." },
               { step: "3", text: "You receive a free, no-pressure estimate to review." },
-              { step: "4", text: "When you're ready, we begin with no money down." },
+              { step: "4", text: "Approve the quote and your crew schedules the build." },
             ].map((item) => (
               <div key={item.step} className="rounded-xl border border-slate-200 bg-white p-6">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-primary font-bold mb-4">

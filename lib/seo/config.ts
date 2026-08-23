@@ -10,7 +10,9 @@ export const SITE = {
   description:
     "Consult & Build CA connects Southern California homeowners with licensed, pre-screened landscaping and hardscaping crews. Paver patios, retaining walls, outdoor kitchens, pools, artificial turf, drainage, and full backyard design.",
   ogImage: "/projects/landscape-hero.png",
-  logo: "/icon-light-32x32.png",
+  // Google requires an Organization logo of at least 112x112px for rich
+  // results; the previous 32x32 icon was too small to be used.
+  logo: "/brand-logo.png",
   areaServed: "Southern California",
   sameAs: [
     "https://www.facebook.com/profile.php?id=61576999892516",
