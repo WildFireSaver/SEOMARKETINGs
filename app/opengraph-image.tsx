@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og"
+import { readFile } from "node:fs/promises"
+import { join } from "node:path"
 
 export const runtime = "nodejs"
 export const alt = "Consult & Build CA – Southern California Landscaping & Hardscaping"
@@ -8,7 +10,12 @@ export const contentType = "image/png"
 const GREEN = "#2b7a45"
 const SLATE = "#0b1220"
 
-export default function OpengraphImage() {
+export default async function OpengraphImage() {
+  // Satori cannot resolve relative URLs, so the brand mark is inlined as a
+  // data URI read straight from the filesystem at render time.
+  const logo = await readFile(join(process.cwd(), "public", "consult-and-build-logo.png"))
+  const logoSrc = `data:image/png;base64,${logo.toString("base64")}`
+
   return new ImageResponse(
     <div
       style={{
@@ -22,22 +29,13 @@ export default function OpengraphImage() {
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-        <div
-          style={{
-            width: 64,
-            height: 64,
-            borderRadius: 14,
-            background: GREEN,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: 34,
-            fontWeight: 700,
-            color: "#ffffff",
-          }}
-        >
-          CB
-        </div>
+        <img
+          src={logoSrc}
+          alt=""
+          width={84}
+          height={84}
+          style={{ borderRadius: 42, background: "#ffffff", objectFit: "contain" }}
+        />
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 30, fontWeight: 700, color: "#ffffff" }}>Consult &amp; Build CA</div>
           <div style={{ fontSize: 19, color: "#94a3b8" }}>Licensed &amp; Insured · Southern California</div>

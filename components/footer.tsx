@@ -1,7 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { Hammer, Facebook, Instagram } from "lucide-react" // Removed Twitter
+import Image from "next/image"
+import { Facebook, Instagram } from "lucide-react"
 
 export function Footer() {
   return (
@@ -10,9 +11,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div className="text-center md:text-left">
             <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
-              <div className="h-10 w-10 rounded-md bg-white/10 flex items-center justify-center">
-                <Hammer className="h-5 w-5 text-primary" />
-              </div>
+              <Image
+                src="/consult-and-build-logo.png"
+                alt="Consult &amp; Build CA logo"
+                width={48}
+                height={48}
+                className="h-12 w-12 shrink-0 rounded-full bg-white object-contain"
+              />
               <span className="text-xl font-bold text-white tracking-tight">Consult &amp; Build CA</span>
             </div>
             <p className="text-sm mb-4 text-slate-400">
