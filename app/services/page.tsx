@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
-import { buildMetadata } from "@/lib/seo/config"
+import { absoluteUrl, buildMetadata } from "@/lib/seo/config"
 import { SERVICES } from "@/lib/seo/services"
 import { LOCATIONS } from "@/lib/seo/locations"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
@@ -40,7 +40,7 @@ export default function ServicesHubPage() {
             itemListElement: SERVICES.map((s, i) => ({
               "@type": "ListItem",
               position: i + 1,
-              url: `https://consultbuildca.com/services/${s.slug}`,
+              url: absoluteUrl(`/services/${s.slug}`),
               name: s.name,
             })),
           },
