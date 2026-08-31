@@ -5,6 +5,7 @@ import { Hero } from "./hero"
 import { ProjectGallery } from "./project-gallery"
 import { Survey } from "./survey"
 import { ZipCodeChecker } from "./zip-code-checker"
+import { LeadCapturePopup } from "./lead-capture-popup"
 import { Clock, Shield, CheckSquare } from "lucide-react"
 import { getSessionData, saveSessionData } from "@/lib/offline-storage"
 import { useRouter } from "next/navigation"
@@ -139,6 +140,8 @@ export function LandingPage() {
 
   return (
     <div className="min-h-screen font-normal bg-transparent">
+      <LeadCapturePopup />
+
       <SectionErrorBoundary name="Hero">
         <Hero
           onGetStarted={handleGetStarted}
