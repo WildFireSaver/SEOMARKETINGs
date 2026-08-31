@@ -33,6 +33,8 @@
     --input: 220 13% 86%;
     --ring: 142 46% 30%; /* Garden green for focus ring */
 
+    --gold: 38 52% 55%; /* Brand gold from the logo, for accents */
+
     --radius: 0.75rem; /* Example radius */
     --chart-1: 142 46% 38%;
     --chart-2: 28 45% 52%;
@@ -108,6 +110,15 @@
   }
 }
 
+/* Display font for headlines */
+.font-display {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+}
+
+.text-gold {
+  color: hsl(var(--gold));
+}
+
 /* Professional, clean animations */
 @keyframes fade-in {
   from {
@@ -122,6 +133,65 @@
 
 .animate-fade-in {
   animation: fade-in 0.6s ease-out;
+}
+
+/* Hero staggered entrance */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.hero-rise {
+  opacity: 0;
+  animation: hero-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Slow, subtle background zoom for the hero photo */
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.12);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.hero-zoom {
+  animation: hero-zoom 12s ease-out forwards;
+}
+
+/* Bouncing scroll cue */
+@keyframes hero-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.hero-bob {
+  animation: hero-bob 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rise,
+  .hero-zoom,
+  .hero-bob {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
 }
 
 /* Glassmorphism Effects */

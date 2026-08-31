@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Fraunces } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -8,7 +8,12 @@ import { ErrorBoundary } from "@/components/error-boundary"
 import { SITE } from "@/lib/seo/config"
 import { JsonLd, organizationSchema, websiteSchema } from "@/components/seo/json-ld"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -49,7 +54,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className="bg-background">
+    <html lang="en" suppressHydrationWarning className={`bg-background ${inter.variable} ${fraunces.variable}`}>
       <body className={inter.className}>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <ErrorBoundary>
