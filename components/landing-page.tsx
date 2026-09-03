@@ -7,6 +7,7 @@ import { ProjectGallery } from "./project-gallery"
 import { ZipCodeChecker } from "./zip-code-checker"
 import { LeadCapturePopup } from "./lead-capture-popup"
 import { ServicesShowcase } from "./home/services-showcase"
+import { EstimatorTeaser } from "./home/estimator-teaser"
 import { WhyUs } from "./home/why-us"
 import { HomeownerReviews } from "./home/homeowner-reviews"
 import { FinalCta } from "./home/final-cta"
@@ -67,6 +68,10 @@ export function LandingPage() {
           zipVerified={isZipVerified}
           zipCodeCheckerSlot={<ZipCodeChecker onSuccess={handleZipCodeSuccess} />}
         />
+      </SectionErrorBoundary>
+
+      <SectionErrorBoundary name="EstimatorTeaser">
+        <EstimatorTeaser />
       </SectionErrorBoundary>
 
       <SectionErrorBoundary name="ServicesShowcase">

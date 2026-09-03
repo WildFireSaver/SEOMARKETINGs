@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Public, main-nav pages
   const core: MetadataRoute.Sitemap = [
     { url: SITE.url, lastModified: now, changeFrequency: "weekly", priority: 1 },
+    { url: absoluteUrl("/estimate"), lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: absoluteUrl("/contact"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: absoluteUrl("/about"), lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: absoluteUrl("/faq"), lastModified: now, changeFrequency: "monthly", priority: 0.5 },

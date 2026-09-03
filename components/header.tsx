@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const NAV = [
+  { href: "/estimate", label: "Cost Calculator" },
   { href: "/services", label: "Services" },
   { href: "/locations", label: "Locations" },
   { href: "/guides", label: "Guides" },

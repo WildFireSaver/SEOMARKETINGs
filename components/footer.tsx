@@ -97,6 +97,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/estimate" className={linkClass}>
+                  Cost Calculator
+                </Link>
+              </li>
+              <li>
                 <Link href="/guides" className={linkClass}>
                   Cost Guides
                 </Link>

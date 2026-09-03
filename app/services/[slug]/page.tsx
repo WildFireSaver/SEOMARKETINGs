@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
-import { Check, CheckCircle2, ArrowRight } from "lucide-react"
+import { Check, CheckCircle2, ArrowRight, Calculator } from "lucide-react"
 import { buildMetadata } from "@/lib/seo/config"
 import { SERVICES, SERVICE_SLUGS, getService } from "@/lib/seo/services"
 import { LOCATIONS } from "@/lib/seo/locations"
@@ -181,6 +181,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 >
                   Get a Free Estimate
                   <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                <Link
+                  href={`/estimate?p=${service.slug}`}
+                  className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 transition-colors hover:bg-slate-100"
+                >
+                  <Calculator className="h-4 w-4 text-primary" />
+                  Calculate your cost instantly
                 </Link>
               </div>
 
