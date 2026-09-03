@@ -1,10 +1,21 @@
 const FORM_DATA_KEY = "homeRenoLandingPageSession_v2" // Changed key to ensure fresh start
 
-// Saves the entire session state object
+// Merges the given fields into the stored session so partial saves (e.g. the
+// survey saving only `formData`) never wipe out other fields like `zipCode`
+// or the cost estimate captured earlier in the funnel.
 export function saveSessionData(sessionState: any) {
   try {
     if (typeof localStorage !== "undefined") {
-      localStorage.setItem(FORM_DATA_KEY, JSON.stringify(sessionState))
+      const existing = getSessionData() || {}
+      const merged = {
+        ...existing,
+        ...sessionState,
+        formData:
+          sessionState?.formData !== undefined
+            ? { ...(existing.formData || {}), ...sessionState.formData }
+            : existing.formData,
+      }
+      localStorage.setItem(FORM_DATA_KEY, JSON.stringify(merged))
     } else {
       console.warn("localStorage is not available. Session data not saved.")
     }

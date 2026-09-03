@@ -10,7 +10,7 @@ import { CostEstimator } from "@/components/estimator/cost-estimator"
 import { PROJECTS, parseEstimateParams } from "@/lib/estimator/pricing"
 
 export const metadata: Metadata = buildMetadata({
-  title: "Free Backyard Cost Calculator - Paver Patio, Turf & Landscaping Prices in California",
+  title: "Landscaping Cost Calculator California – Free Instant Estimate",
   description:
     "Get an instant 2026 cost estimate for paver patios, artificial turf, retaining walls, outdoor kitchens and more. Adjust size, finish, and ZIP code to see real California prices, then lock in an exact quote.",
   path: "/estimate",
