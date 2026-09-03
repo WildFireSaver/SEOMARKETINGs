@@ -158,31 +158,33 @@ export function Hero({ onGetStarted, zipVerified = false, zipCodeCheckerSlot }: 
       </section>
 
       {/* How it works */}
-      <section id="how-it-works" className="bg-slate-50">
+      <section id="how-it-works" className="bg-slate-50 py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl">
-            <div className="mb-10 text-center">
-              <h2 className="font-display text-3xl font-semibold text-slate-900 lg:text-4xl">How it works</h2>
-              <p className="mt-2 text-slate-600">Four simple steps from first call to finished project.</p>
+            <div className="mb-12 text-center">
+              <p className="text-sm font-semibold uppercase tracking-wider text-primary">Simple by design</p>
+              <h2 className="font-display mt-2 text-3xl font-semibold text-slate-900 lg:text-4xl">How it works</h2>
+              <p className="mt-3 text-lg text-slate-600">Four steps from first conversation to finished backyard.</p>
             </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { step: "1", text: "Tell us about the outdoor project you have in mind." },
-                { step: "2", text: "We connect you with trusted, licensed local landscaping crews near you." },
-                { step: "3", text: "You receive a free, no-pressure estimate to review." },
-                { step: "4", text: "Approve the quote and your crew schedules the build." },
-              ].map((item) => (
-                <div
-                  key={item.step}
-                  className="rounded-xl border border-slate-200 bg-white p-6 transition-shadow hover:shadow-md"
+                { title: "Tell us your vision", text: "Share the outdoor project you have in mind in about two minutes." },
+                { title: "Get matched", text: "We connect you with licensed, insured local crews we have already vetted." },
+                { title: "Review your quote", text: "Receive a free, itemized, no-pressure estimate to look over on your schedule." },
+                { title: "Watch it come to life", text: "Approve the quote and your crew schedules the build." },
+              ].map((item, i) => (
+                <li
+                  key={item.title}
+                  className="relative rounded-2xl border border-slate-200 bg-white p-6 transition-shadow hover:shadow-lg"
                 >
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 font-bold text-gold">
-                    {item.step}
+                  <div className="font-display mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-slate-900 text-lg font-semibold text-gold">
+                    {i + 1}
                   </div>
-                  <p className="text-sm leading-relaxed text-slate-600">{item.text}</p>
-                </div>
+                  <h3 className="text-base font-semibold text-slate-900">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.text}</p>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </div>
       </section>

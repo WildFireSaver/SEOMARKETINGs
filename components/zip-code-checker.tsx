@@ -23,7 +23,8 @@ export function ZipCodeChecker({ onSuccess }: ZipCodeCheckerProps) {
     setError(null)
     setIsLoading(true)
 
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    // Brief pause so the check feels deliberate without making users wait.
+    await new Promise((resolve) => setTimeout(resolve, 450))
 
     const isValid = validateCaliforniaZip(zipCode)
     trackZipCodeSubmission(zipCode, isValid)
@@ -60,14 +61,17 @@ export function ZipCodeChecker({ onSuccess }: ZipCodeCheckerProps) {
               }}
               placeholder="Enter ZIP Code"
               required
-              className="pl-10 h-12 text-center text-lg border-slate-300 focus:border-blue-500"
+              inputMode="numeric"
+              autoComplete="postal-code"
+              aria-label="ZIP code"
+              className="h-12 border-slate-300 pl-10 text-lg tracking-wider focus-visible:ring-primary"
               aria-describedby={error ? "zip-error" : undefined}
             />
           </div>
           <Button
             type="submit"
             disabled={isLoading || zipCode.length !== 5}
-            className="bg-blue-600 hover:bg-blue-700 text-white h-12 px-6"
+            className="h-12 bg-primary px-6 font-semibold text-primary-foreground hover:bg-primary/90"
           >
             {isLoading ? (
               <Loader2 className="h-5 w-5 animate-spin" />
